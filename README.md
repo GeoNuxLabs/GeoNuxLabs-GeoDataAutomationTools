@@ -131,7 +131,8 @@ For QGIS-script, easiest is to open the python-file in QGIS and run it from the 
 
 Processed files are written to the output directory defined in the script or
 passed as an argument.
-How It Works
+
+## How It Works
 
 The tools in this repository follow a simple design philosophy:
 
