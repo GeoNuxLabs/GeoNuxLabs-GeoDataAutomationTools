@@ -24,8 +24,8 @@ from qgis.core import (
 )
 
 # Input layers
-point_layer = QgsProject.instance().mapLayersByName("jalman2")[0]
-line_layer = QgsProject.instance().mapLayersByName("vattendrag")[0]
+point_layer = QgsProject.instance().mapLayersByName("PointLayer")[0]
+line_layer = QgsProject.instance().mapLayersByName("LineLayer")[0]
 
 # Output layer (memory)
 output_layer = QgsVectorLayer(
@@ -50,9 +50,10 @@ for point_feature in point_layer.getFeatures():
     )
 
     if not candidate_ids:
-        messagee = f"[WARNING] Point ID {point_feature.id()} had no nearby lines. "            
+        messagee = f"[WARNING] Point ID {point_feature.id()} had no nearby lines. Point will be dropped."
         QgsMessageLog.logMessage(messagee)
         print(messagee)
+        continue  # point is removed 
 
     # Step 2: compute nearest snapped point on candidate lines
     best_distance = float("inf")
@@ -71,11 +72,12 @@ for point_feature in point_layer.getFeatures():
             best_distance = distance
             best_point_geom = snapped_point
 
-    # Step 3: create new snapped feature
-    new_feature = QgsFeature(output_layer.fields())
-    new_feature.setGeometry(best_point_geom)
-    new_feature.setAttributes(point_feature.attributes())
-    provider.addFeature(new_feature)
+    # Step 3: create new snapped feature (endast om snapping lyckats)
+    if best_point_geom is not None:  # <-- litet säkerhetsbälte
+        new_feature = QgsFeature(output_layer.fields())
+        new_feature.setGeometry(best_point_geom)
+        new_feature.setAttributes(point_feature.attributes())
+        provider.addFeature(new_feature)
 
 # Add result to project
 QgsProject.instance().addMapLayer(output_layer)
