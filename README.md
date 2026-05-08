@@ -85,17 +85,9 @@ GeoNux_GeodataAutomationTools/
 ├── scripts/
 │   ├── raster/
 │   ├── vector/
-│   ├── qgis/
-│   └── utilities/
-│
-├── dev/
-│   └── experimental_snippets/
-│
-├── data/
-│   └── sample_inputs/
+│   └── qgis/
 │
 ├── LICENSE
-├── requirements.txt
 └── README.md
 ```
 
