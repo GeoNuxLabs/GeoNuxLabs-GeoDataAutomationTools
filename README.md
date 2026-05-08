@@ -97,6 +97,7 @@ GeoNux_GeodataAutomationTools/
 ├── LICENSE
 ├── requirements.txt
 └── README.md
+```
 
 ## Installation
 
@@ -128,13 +129,13 @@ Each script includes comments describing expected inputs and outputs.
 
 Most tools operate on:
 
-    -directory of raster tiles
+- directory of raster tiles
 
-    -vector file
+- vector file
 
-    -QGIS project
+- QGIS project
 
-    -or paths defined directly in the script
+- or paths defined directly in the script
 
 ### 3. Run the Script
 
@@ -153,15 +154,15 @@ How It Works
 
 The tools in this repository follow a simple design philosophy:
 
-    -Small, focused scripts that do one thing well
+- Small, focused scripts that do one thing well
 
-    -Minimal dependencies to keep the tools portable
+- Minimal dependencies to keep the tools portable
 
-    -Readable code intended for learning and reuse
+- Readable code intended for learning and reuse
 
-    -Modular functions that can be copied into -larger workflows
+- Modular functions that can be copied into -larger workflows
 
-    -Clear separation between scanning, processing, and writing steps
+- Clear separation between scanning, processing, and writing steps
 
 This makes the repository suitable both as a practical toolbox and as a
 reference library for building more advanced automation pipelines.
@@ -170,13 +171,13 @@ Contributing
 Contributions are welcome.
 You may submit issues or pull requests to:
 
-    -add new automation scripts
+- add new automation scripts
 
-    -improve existing workflows
+- improve existing workflows
 
-    -enhance documentation
+- enhance documentation
 
-    -fix bugs or edge cases
+- fix bugs or edge cases
 
 ## License
 
