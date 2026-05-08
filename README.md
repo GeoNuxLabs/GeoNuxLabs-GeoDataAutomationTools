@@ -37,7 +37,7 @@ results, or any operational consequences arising from the use of these tools.
 
 ## Overview
 
-GeoNux_GeodataAutomationTools is a collection of small, focused Python scripts  
+GeoNuxLabs GeodataAutomationTools is a collection of small, focused Python scripts  
 designed to simplify repetitive or time‑consuming geospatial tasks.  
 The tools are intentionally modular and easy to adapt, making them suitable for:
 
@@ -48,39 +48,28 @@ The tools are intentionally modular and easy to adapt, making them suitable for:
 - experimentation and prototyping  
 
 The repository is intended as a practical toolbox rather than a single  
-application — each script solves one specific problem cleanly and transparently.
+application. Each script solves one specific problem cleanly and transparently.
 
 ---
 
 ## Features
 
 ### ✔ Raster Processing Utilities  
-- Batch mosaicking of DEM tiles  
-- VRT creation  
-- Reprojection helpers  
-- NoData normalization  
+- Batch mosaicking of DEM tiles   
 
 ### ✔ Vector Processing Helpers  
-- CRS checks  
-- Geometry validation  
-- Attribute utilities  
 
 ### ✔ QGIS/PyQGIS Snippets  
 - Layer management helpers  
-- Processing‑framework wrappers  
-- Project automation examples  
+- Processing automations 
 
-### ✔ General Workflow Tools  
-- Directory scanning  
-- File filtering  
-- Logging templates  
-- Reusable utility functions  
+### ✔ General Workflow Tools    
 
 ---
 
 ## Project Structure
 ```bash
-GeoNux_GeodataAutomationTools/
+GeoNuxLabs-GeodataAutomationTools/
 │
 ├── scripts/
 │   ├── raster/
@@ -96,8 +85,8 @@ GeoNux_GeodataAutomationTools/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/GeoNux_GeodataAutomationTools.git
-cd GeoNux_GeodataAutomationTools
+git clone https://github.com/yourusername/GeoNuxLabs-GeodataAutomationTools.git
+cd GeoNuxLabs-GeodataAutomationTools
 ```
 
 ### 2. Create a Python environment (recommended)
@@ -134,7 +123,7 @@ Most tools operate on:
 From the project root or script directory:
 
 ```bash
-python3 scripts/raster/mosaic_dem_tiles.py
+python3 scripts/vector/SnapPoints.py
 ```
 For QGIS-script, easiest is to open the python-file in QGIS and run it from the python terminal.
 
@@ -152,13 +141,14 @@ The tools in this repository follow a simple design philosophy:
 
 - Readable code intended for learning and reuse
 
-- Modular functions that can be copied into -larger workflows
+- Modular functions that can be copied into larger workflows
 
 - Clear separation between scanning, processing, and writing steps
 
 This makes the repository suitable both as a practical toolbox and as a
 reference library for building more advanced automation pipelines.
-Contributing
+
+## Contributing
 
 Contributions are welcome.
 You may submit issues or pull requests to:
