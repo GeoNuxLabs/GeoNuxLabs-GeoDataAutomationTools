@@ -34,22 +34,22 @@ from qgis.core import (
 
 # Config
 ID_FIELD = "ID"          # point ID field
-WATER_ID_FIELD = "VDRID"  # watercourse ID field in vattendrag
+WATER_ID_FIELD = "VDRID"  # watercourse ID field 
 MAX_POINT_LINE_DIST = 0.5  # max distance (m) to accept point as "on" line
 
 # Input layers
 point_layer_1 = QgsProject.instance().mapLayersByName(
-    "jalman_start_snapped_clean"
+    "path"
 )[0]
 point_layer_2 = QgsProject.instance().mapLayersByName(
-    "jalman_stopp_snapped_clean"
+    "path"
 )[0]
-water_layer = QgsProject.instance().mapLayersByName("vattendrag")[0]
+water_layer = QgsProject.instance().mapLayersByName("path")[0]
 
 # Output layer (memory)
 output_layer = QgsVectorLayer(
     f"LineString?crs={water_layer.crs().authid()}",
-    "klippta_vattenlinjer",
+    "segmented_waterlines",
     "memory"
 )
 provider = output_layer.dataProvider()
